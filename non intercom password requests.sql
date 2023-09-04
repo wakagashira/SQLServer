@@ -12,3 +12,4 @@ AND subject NOT LIKE '%Re: %'
 GROUP BY DATEPART(MONTH, t.CreatedDate),
 DATEPART(Year, t.CreatedDate),
 CAST(DATEPART(Month, t.CreatedDate) AS NVARCHAR) + '-' + CAST(datepart(year, t.CreatedDate) as nvarchar)
+--v2 github

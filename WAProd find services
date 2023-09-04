@@ -1,0 +1,11 @@
+SELECT p.status,  s.*, p.*
+FROM public.services as s
+--inner Join public.service_program_assets as p on s.service_program_id = p.service_program_id and s.asset_id = p.asset_id
+inner Join public.service_programs as p on s.service_program_id = p.id 
+where s.business_id = 11896
+--and s.id = 65933
+and completion_date is null 
+--and s.ui_number_text = 'SE-0036-7'
+and s.deleted_at is null 
+--and s.reminder_sent_datetime is not null 
+order by p.ui_number_text
